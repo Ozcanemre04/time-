@@ -14,6 +14,7 @@ let secondchild = document.querySelector('.secondChild')
 function time(){
     let current_Date=new Date()
     let hours = current_Date.getHours()
+  
 
     let minutes = current_Date.getMinutes()
     
@@ -28,6 +29,7 @@ function time(){
 
     let year = current_Date.getFullYear()
 footer.innerHTML=year
+//day
 let day  =current_Date.getDay()
 if(day===1){
     header.innerHTML="Mon"
@@ -53,6 +55,7 @@ if(day===7){
 let jour = document.querySelector('.jour')
 
 let mois = document.querySelector('.mois')
+//date
 let date = current_Date.getDate()
 if(date<10){
     
@@ -61,7 +64,7 @@ if(date<10){
 else{
     jour.innerHTML=date
 }
-
+//months
 let month = current_Date.getMonth()
 mois.innerHTML=month
 if(month===0){
