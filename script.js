@@ -14,19 +14,45 @@ let secondchild = document.querySelector('.secondChild')
 function time(){
     let current_Date=new Date()
     let hours = current_Date.getHours()
-  
-
-    let minutes = current_Date.getMinutes()
     
-    let secondes = current_Date.getSeconds()
-    if(secondes<10||minutes<10||hours<10){
-        secondchild.innerHTML=hours +":"+minutes+":"+"0"+secondes
+    let min = current_Date.getMinutes()
+    let sec = current_Date.getSeconds()
+   let hour= document.querySelector('#hours')
+   
+   let minute= document.querySelector('#minutes')
+   
+    let seconde= document.querySelector('#seconde');
+    hour.innerHTML=hours;
+    minute.innerHTML=min;
+    seconde.innerHTML=sec
 
-    }
-    else{
-        secondchild.innerHTML=hours +":"+minutes+":"+secondes
-    }
+if(hour.innerHTML<10){
+    hour.innerHTML="0"+hours;
+    
+}
+if(minute.innerHTML<10){
+    minute.innerHTML="0"+min;
+}
+if(seconde.innerHTML<10){
+    seconde.innerHTML="0"+sec;
+}
 
+
+  hour.addEventListener('click',()=>{
+    hour.classList.toggle('active')
+      if(hour.classList.contains('active')){
+      if(hours>12){
+          document.querySelector("#PmOrAm").innerHTML="PM"
+      }
+      else{
+        document.querySelector("#PmOrAm").innerHTML="PM"
+      }}
+      else{
+        document.querySelector("#PmOrAm").innerHTML="";
+      }
+  })
+  
+//year
     let year = current_Date.getFullYear()
 footer.innerHTML=year
 //day
