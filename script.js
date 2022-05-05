@@ -22,14 +22,18 @@ function time(){
    let minute= document.querySelector('#minutes')
    
     let seconde= document.querySelector('#seconde');
-    hour.innerHTML=hours;
+   
     minute.innerHTML=min;
     seconde.innerHTML=sec
 
 if(hour.innerHTML<10){
-    hour.innerHTML="0"+hours;
+  hour.innerHTML="0"+hours;
     
 }
+if(hour.innerHTML>10){
+    hour.innerHTML=hours
+}
+
 if(minute.innerHTML<10){
     minute.innerHTML="0"+min;
 }
@@ -41,14 +45,19 @@ if(seconde.innerHTML<10){
   hour.addEventListener('click',()=>{
     hour.classList.toggle('active')
       if(hour.classList.contains('active')){
-      if(hours>12){
-          document.querySelector("#PmOrAm").innerHTML="Pm"
+          if(hours>12){
+              document.querySelector("#PmOrAm").innerHTML="Pm"
+              hour.innerHTML=hours-12
+              
       }
-      else{
+      else {
         document.querySelector("#PmOrAm").innerHTML="Am"
+         hour.innerHTML=hours
       }}
       else{
         document.querySelector("#PmOrAm").innerHTML="";
+          hour.innerHTML=hours
+
       }
   })
   
@@ -70,7 +79,7 @@ if(day===4){
     header.innerHTML="Thurs"
 }
 if(day===5){
-    header.innerHTML="fri"
+    header.innerHTML="Fri"
 }
 if(day===6){
     header.innerHTML="Satur"
@@ -100,28 +109,28 @@ if(month===1){
     mois.innerHTML="Feb"
 }
 if(month===2){
-    mois.innerHTML="mart"
+    mois.innerHTML="Mart"
 }
 if(month===3){
     mois.innerHTML="Apris"
 }
 if(month===4){
-    mois.innerHTML="may"
+    mois.innerHTML="May"
 }
 if(month===5){
-    mois.innerHTML="juny"
+    mois.innerHTML="Juny"
 }
 if(month===6){
-    mois.innerHTML="jully"
+    mois.innerHTML="Jully"
 }
 if(month===7){
-    mois.innerHTML="august"
+    mois.innerHTML="August"
 }
 if(month===8){
-    mois.innerHTML="sept"
+    mois.innerHTML="Sept"
 }
 if(month===9){
-    mois.innerHTML="oct"
+    mois.innerHTML="Oct"
 }
 if(month===10){
     mois.innerHTML="Nov"
@@ -130,4 +139,5 @@ if(month===11){
     mois.innerHTML="Dec"
 }
 }
+
 setInterval(time,1000)
