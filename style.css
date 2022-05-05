@@ -92,3 +92,13 @@ footer{
 #seconde{
     font-size: 80px;
 }
+#PmOrAm{
+    font-size: 80px;
+    margin-left: 10px;
+}
+#hours{
+    margin-left: 50px;
+}
+#hours:hover{
+    cursor: pointer;
+}

@@ -42,10 +42,10 @@ if(seconde.innerHTML<10){
     hour.classList.toggle('active')
       if(hour.classList.contains('active')){
       if(hours>12){
-          document.querySelector("#PmOrAm").innerHTML="PM"
+          document.querySelector("#PmOrAm").innerHTML="Pm"
       }
       else{
-        document.querySelector("#PmOrAm").innerHTML="PM"
+        document.querySelector("#PmOrAm").innerHTML="Am"
       }}
       else{
         document.querySelector("#PmOrAm").innerHTML="";
