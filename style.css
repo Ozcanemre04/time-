@@ -28,9 +28,9 @@ header{
 .ChildChild{
     height: 200px;
     background-color:white;
-    border-left: 5px solid gray;
+    border-left: 5px solid rgb(209, 206, 206);
     width: 300px;
-border-right: 5px solid gray;
+border-right: 5px solid rgb(209, 206, 206);
     text-align: center;
     
     font-size: 80px;
@@ -86,6 +86,7 @@ footer{
 span{
     font-size: 150px;
     font-weight: bolder;
+    color: rgb(67, 65, 65);
 }
 #seconde{
     font-size: 80px;
