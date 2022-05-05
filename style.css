@@ -83,7 +83,8 @@ footer{
     border-bottom: 5px solid rgb(227, 94, 94);
     border-top: 6px solid rgb(227, 94, 94);
 }
-span{
+.secondChild p{
+    display: inline;
     font-size: 150px;
     font-weight: bolder;
     color: rgb(67, 65, 65);
