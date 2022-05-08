@@ -65,28 +65,10 @@ if(seconde.innerHTML<10){
     let year = current_Date.getFullYear()
 footer.innerHTML=year
 //day
-let day  =current_Date.getDay()
-if(day===1){
-    header.innerHTML="Mon"
-}
-if(day===2){
-    header.innerHTML="Tues"
-}
-if(day===3){
-    header.innerHTML="Wed"
-}
-if(day===4){
-    header.innerHTML="Thurs"
-}
-if(day===5){
-    header.innerHTML="Fri"
-}
-if(day===6){
-    header.innerHTML="Satur"
-}
-if(day===7){
-    header.innerHTML="Sun"
-}
+// let day  =current_Date.getDay()
+let dayName=current_Date.toLocaleString("en-us",{weekday:'short'})
+header.innerHTML=dayName
+
 let jour = document.querySelector('.jour')
 
 let mois = document.querySelector('.mois')
@@ -100,44 +82,10 @@ else{
     jour.innerHTML=date
 }
 //months
-let month = current_Date.getMonth()
-mois.innerHTML=month
-if(month===0){
-    mois.innerHTML="Jan"
-}
-if(month===1){
-    mois.innerHTML="Feb"
-}
-if(month===2){
-    mois.innerHTML="Mart"
-}
-if(month===3){
-    mois.innerHTML="Apris"
-}
-if(month===4){
-    mois.innerHTML="May"
-}
-if(month===5){
-    mois.innerHTML="Juny"
-}
-if(month===6){
-    mois.innerHTML="Jully"
-}
-if(month===7){
-    mois.innerHTML="August"
-}
-if(month===8){
-    mois.innerHTML="Sept"
-}
-if(month===9){
-    mois.innerHTML="Oct"
-}
-if(month===10){
-    mois.innerHTML="Nov"
-}
-if(month===11){
-    mois.innerHTML="Dec"
-}
+//let month = current_Date.getMonth()
+let monthName=current_Date.toLocaleString('en-us',{month:"short"})
+mois.innerHTML=monthName
+
 }
 
 setInterval(time,1000)
